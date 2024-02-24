@@ -5,6 +5,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Workspace extends Gmail{
 
@@ -59,7 +60,7 @@ public class Workspace extends Gmail{
 
         return m.size();
     }
-    class mycomparator implements Comparator<Meeting> {
+    static class mycomparator implements Comparator<Meeting> {
         @Override public int compare(Meeting m1, Meeting m2)
         {
             if (m1.getEndTime().compareTo(m2.getEndTime())<0) {
